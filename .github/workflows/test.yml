@@ -11,8 +11,13 @@ jobs:
       fail-fast: false
       matrix:
         oscript_version: ['stable', 'dev']
+        test_engine: ['1testrunner']
+        include:
+          - oscript_version: 'dev'
+            test_engine: 'oneunit'
     uses: autumn-library/workflows/.github/workflows/test.yml@v1
     with:
       oscript_version: ${{ matrix.oscript_version }}
+      test_engine: ${{ matrix.test_engine }}
       dotnet_version: "8.x.x"
       build_package: true
