@@ -1,0 +1,16 @@
+name: Публикация релиза
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+jobs:
+  release:
+    uses: autumn-library/workflows/.github/workflows/release.yml@v1
+    with:
+      package_mask: "allocs-*.ospx"
+      dotnet_version: "8.x.x"
+    secrets:
+      PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
