@@ -10,7 +10,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        oscript_version: ['stable', 'dev']
+        oscript_version: ['stable']
         test_engine: ['1testrunner']
         include:
           - oscript_version: 'dev'
