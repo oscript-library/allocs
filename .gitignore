@@ -1,0 +1,16 @@
+# OneScript
+Components/
+out/
+oscript_modules/
+*.ospx
+
+# VS Code
+.vscode/
+
+# .NET
+[Dd]ebug/
+[Rr]elease/
+[Bb]in/
+[Oo]bj/
+
+.vs/
